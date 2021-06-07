@@ -1,0 +1,258 @@
+:root{
+    --brown-clair: #ecd4c6;
+    --yellow: #e3b155;
+    --black: #27242a;
+    --beige: #f4e7d5;
+    --ment: #84b09b;
+    --ment-clair: #cdf3e1;
+    --gray:#606060;
+    --clair: #faf1eb;
+    --font: 'Stint Ultra Condensed';
+    --title:'Lobster Two';
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+header{
+    height: 100px;
+    width: 100%;
+    background-color:var(--brown-clair);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* ------------------------------CANVAS----------------------------------- */
+canvas{
+    display: block;
+    margin: auto;
+}
+
+/* ------------------------------NAV HEAD----------------------------------- */
+@keyframes tipsy {
+    0%{
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+  
+  .link-cubismo, .link-surrealismo, .link-impresionismo, .link-dadaismo, .link-futurismo{
+    color:var(--gray);
+    text-shadow: 0 10px 15px #2e2e31, 0 20px 30px #2e2e31;
+    font-size: 1.6rem;
+    font-family: var(--title);
+    /* font-weight: bold; */
+    text-decoration: none;
+    margin: 0;
+    position: absolute;
+    top: 45px;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .link-cubismo{
+    left: 50%;
+  } 
+  .link-surrealismo{
+    left: 60%;
+  }
+   .link-impresionismo{
+    left: 70%;
+   }
+    .link-dadaismo{
+        left: 80%;
+    } 
+    .link-futurismo{
+        left: 90%;
+    }
+
+  .link-cubismo:before, .link-surrealismo:before, .link-impresionismo:before, .link-dadaismo:before, .link-futurismo:before,
+  .link-cubismo:after, .link-surrealismo:after, .link-impresionismo:after, .link-dadaismo:after, .link-futurismo:after {
+    content: '';
+    padding: .5em .4em;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    display: block;
+    border: 6px solid var(--ment);
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .link-cubismo:before, .link-surrealismo:before, .link-impresionismo:before, .link-dadaismo:before, .link-futurismo:before{
+    border-color:var(--ment) var(--ment-clair) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .link-cubismo:after, .link-surrealismo:after, .link-impresionismo:after, .link-dadaismo:after, .link-futurismo:after {
+
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) var(--ment) var(--ment-clair) ;
+    box-shadow: 10px 10px 10px rgba(46, 46, 49, .8);
+  }
+
+/* ------------------------------titulo----------------------------------- */
+@keyframes tipsy {
+    0% {
+      transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    }
+  }
+  .link-text {
+    color: #fffbf1;
+    text-shadow: 0 20px 25px #2e2e31, 0 40px 60px #2e2e31;
+    font-size: 80px;
+    font-family: var(--title);
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -3px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+ .link-text:before,
+ .link-text:after {
+    content: '';
+    padding: .5em .4em;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    top: 50%;
+    display: block;
+    border: 15px solid var(--ment);
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    animation: 10s infinite alternate ease-in-out tipsy;
+  }
+  
+  .link-text:before {
+    border-color:var(--ment) var(--ment-clair) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+    z-index: -1;
+  }
+  
+  .link-text:after {
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) var(--ment) var(--ment-clair) ;
+    box-shadow: 25px 25px 25px rgba(46, 46, 49, .8);
+  }
+
+/* ------------------------------MAIN----------------------------------- */
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+main .container-1, .container-2, 
+.container-3, .container-4{
+    margin: auto;
+    margin-top: 20px;
+}
+
+.container-1{
+    height: 200px;
+    width: 100%;
+    background-color:var(--clair);
+}
+
+.container-2{
+    height:200px;
+    width:100%;
+    /* background-color: var(--ment-clair); */
+}
+
+.container-3{
+    height: 500px;
+    width: 70%;
+    background-color: var(--gray);
+    transition: 2s;
+}
+
+.container-3 img{
+object-fit: contain;
+height: 100%;
+transition: 2s;
+
+}
+
+.container-3 img:hover {
+    filter: grayscale(80%);
+}
+
+.container-4{
+    height: 500px;
+    width: 25%;
+    background-color: var(--brown-clair);
+    text-align: center;
+    /* padding: 208px 5px; */
+    display: grid;
+    grid-template-rows:repeat(4, 20%);
+    grid-template-columns: 10% 70% 10%;
+    grid-gap:5%;
+    
+}
+
+.container-4 h2{
+    padding-top: 30%;
+    opacity: 0;
+    transition: 3s;
+    cursor: pointer;
+    font-family:var(--font);
+}
+
+.container-4 h2:hover{
+    opacity: 1;
+    padding-top: 15%;
+    font-size: 2.6rem;
+}
+
+.contain-paint-titulo{
+    grid-column: 2 / 3;
+    grid-row: 1/ 2;
+    background-color: var(--ment);
+}
+
+.contain-paint-autor{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: var(--clair);
+}
+
+.contain-paint-vanguardia{
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    background-color: var(--ment-clair);
+}
+
+.contain-paint-year{
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    background-color: var(--yellow);
+}
+
+footer{
+    height: 60px;
+    width: 100%;
+    background-color:var(--ment);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer .icons a{
+    color: var(--clair);
+    text-decoration: none;
+    margin-right: 30px;
+    }
